@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Checklist</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>AI Readiness Checklist</h1>
+    <form id="assessment-form">
+        <div class="section">
+            <h2>Organizational Readiness</h2>
+            <label><input type="checkbox" class="question" data-section="Organizational Readiness"> Leadership interest in AI?</label><br>
+            <label><input type="checkbox" class="question" data-section="Organizational Readiness"> Resources allocated for AI?</label><br>
+            <label><input type="checkbox" class="question" data-section="Organizational Readiness"> Stakeholders mapped?</label><br>
+            <label><input type="checkbox" class="question" data-section="Organizational Readiness"> Engagement with donors?</label>
+        </div>
+        <div class="section">
+            <h2>Regulatory Compliance</h2>
+            <label><input type="checkbox" class="question" data-section="Regulatory Compliance"> GDPR or KVKK compliant?</label><br>
+            <label><input type="checkbox" class="question" data-section="Regulatory Compliance"> Vendor contracts audited?</label><br>
+            <label><input type="checkbox" class="question" data-section="Regulatory Compliance"> Sector-specific obligations addressed?</label><br>
+            <label><input type="checkbox" class="question" data-section="Regulatory Compliance"> Risk policies in place?</label>
+        </div>
+        <button type="button" onclick="generateRadarMap()">Submit</button>
+    </form>
+    <canvas id="radar-chart"></canvas>
+
+    <form id="enhancement-form" style="margin-top: 20px;">
+        <button type="button" onclick="submitToGPT()">Get GPT Suggestions</button>
+    </form>
+    <div id="gpt-response" style="margin-top: 20px; color: #333;"></div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
